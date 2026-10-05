@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "GenererJson",
+            "request": "launch",
+            "mainClass": "GenererJson",
+            "cwd": "${workspaceFolder}/impl/TP-01"
+        }
+    ]
+}
