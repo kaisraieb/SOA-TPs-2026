@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Published by XML-WS Runtime (https://github.com/eclipse-ee4j/metro-jax-ws). Runtime's version is XML-WS Runtime 4.0.3 git-revision#a57c222. --><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://Services.kais.dev/" version="1.0" targetNamespace="http://Services.kais.dev/">
+  
+  <xs:element name="convertionEuroToDinar" type="tns:convertionEuroToDinar"/>
+  
+  <xs:element name="convertionEuroToDinarResponse" type="tns:convertionEuroToDinarResponse"/>
+  
+  <xs:element name="getCompte" type="tns:getCompte"/>
+  
+  <xs:element name="getCompteResponse" type="tns:getCompteResponse"/>
+  
+  <xs:element name="getComptes" type="tns:getComptes"/>
+  
+  <xs:element name="getComptesResponse" type="tns:getComptesResponse"/>
+  
+  <xs:complexType name="convertionEuroToDinar">
+    
+    <xs:sequence>
+      
+      <xs:element name="arg0" type="xs:double"/>
+      
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:complexType name="convertionEuroToDinarResponse">
+    
+    <xs:sequence>
+      
+      <xs:element name="return" type="xs:double"/>
+      
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:complexType name="getCompte">
+    
+    <xs:sequence>
+      
+      <xs:element name="arg0" type="xs:long"/>
+      
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:complexType name="getCompteResponse">
+    
+    <xs:sequence>
+      
+      <xs:element name="return" type="tns:compte" minOccurs="0"/>
+      
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:complexType name="compte">
+    
+    <xs:sequence>
+      
+      <xs:element name="code" type="xs:long"/>
+      
+      <xs:element name="dateCreation" type="xs:dateTime" minOccurs="0"/>
+      
+      <xs:element name="solde" type="xs:double"/>
+      
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:complexType name="getComptes">
+    
+    <xs:sequence/>
+    
+  </xs:complexType>
+  
+  <xs:complexType name="getComptesResponse">
+    
+    <xs:sequence>
+      
+      <xs:element name="return" type="tns:compte" minOccurs="0" maxOccurs="unbounded"/>
+      
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+</xs:schema>
